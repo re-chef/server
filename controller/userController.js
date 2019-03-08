@@ -6,25 +6,16 @@ require('dotenv').config()
 
 class Controller {
     static login(req,res) {
-        console.log('masuk sini');
-        
         let logged = ""
         client.verifyIdToken({
             idToken : req.body.id_token,
             audience : process.env.CLIENT_ID })
             .then(response => {
-                // console.log(response.payload.email,"===");
-                
-                // let data = response.payload
                 logged = response.payload
-                console.log(logged,"===logged");
-                
                 return User.findOne({ email: logged.email })
 
             })
             .then(data => {
-                console.log(data);
-                
                 if (data) {
                     res.status(200).json({
                         message: 'user succesfully logged',
@@ -53,8 +44,6 @@ class Controller {
                 }
             })
             .catch(err => {
-                console.log(err);
-                
                 res.status(err).json(err)
             })
     }

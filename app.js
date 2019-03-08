@@ -26,7 +26,6 @@ app.use('/recipes', recipes)
 app.use('/user', userRoutes)
 
 
-
 app.listen(port, function () {
     console.log('listen to port', port);
 })
