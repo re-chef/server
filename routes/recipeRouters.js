@@ -5,7 +5,7 @@ const controller = require('../controller/recipeController')
 router.get('/search', controller.getRecipes)
 
 // get recipe
-router.get('/recipe/:id', controller.recipes)
+router.get('/:id', controller.recipes)
 
 
 
