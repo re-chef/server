@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const controller = require('../controllers/recipeController')
+const controller = require('../controller/recipeController')
 
 // search recipes
 router.get('/search', controller.getRecipes)

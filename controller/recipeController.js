@@ -1,4 +1,4 @@
-const model = require('../models/user')
+// const model = require('../models/user')
 const axios = require('axios')
 const ENV = require('dotenv')
 ENV.config()
