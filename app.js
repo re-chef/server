@@ -21,7 +21,7 @@ app.use(express.json())
 
 app.use('/translate', gTranslateRoutes)
 
-// app.use('/video', youtubeRoutes)
+app.use('/video', youtubeRoutes)
 app.use('/recipes', recipes)
 app.use('/user', userRoutes)
 
